@@ -1,16 +1,16 @@
 New Project Django Project 
 1. Project setup (first time)
 
-# 1) Create folder and open it
+# 1 Create folder and open it
 cd Laptop-brands
 
-# 2) Create virtual environment
+# 2 Create virtual environment
 python -m venv venv
 
-# 3) Activate virtual environment (Windows)
+# 3 Activate virtual environment (Windows)
 venv\Scripts\activate
 
-# 4) Install Django
+# 4 Install Django
 pip install django
 
 # Optional: install bootstrap package for Django templates
