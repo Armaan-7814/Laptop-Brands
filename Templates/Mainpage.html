@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LapZone | Premium Laptop Collection</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:#020617;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#38bdf8;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+margin-left:30px;
+font-weight:500;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#38bdf8;
+}
+
+
+/* HERO */
+
+.hero{
+height:80vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+background:linear-gradient(to right,#020617,#0f172a,#020617);
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero span{
+color:#38bdf8;
+}
+
+.hero p{
+color:#94a3b8;
+font-size:18px;
+margin-bottom:30px;
+}
+
+.hero button{
+padding:12px 30px;
+border:none;
+background:#38bdf8;
+color:black;
+font-weight:600;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero button:hover{
+background:#0ea5e9;
+transform:scale(1.05);
+}
+
+
+/* BRAND SECTION */
+
+.brands{
+padding:60px;
+}
+
+.brands h2{
+text-align:center;
+margin-bottom:40px;
+font-size:32px;
+}
+
+.brand-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.brand-card{
+background:#020617;
+padding:30px;
+border-radius:15px;
+text-align:center;
+transition:0.4s;
+cursor:pointer;
+border:1px solid transparent;
+}
+
+.brand-card:hover{
+transform:translateY(-10px);
+border:1px solid #38bdf8;
+box-shadow:0 0 20px rgba(56,189,248,0.3);
+}
+
+.brand-card img{
+width:100%;
+height:140px;
+object-fit:contain;
+margin-bottom:15px;
+}
+
+.brand-card h3{
+margin-bottom:10px;
+}
+
+.brand-card p{
+color:#94a3b8;
+font-size:14px;
+}
+
+
+/* FOOTER */
+
+.footer{
+background:#020617;
+padding:20px;
+text-align:center;
+margin-top:50px;
+color:#94a3b8;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="logo">LapZone</div>
+
+<div class="nav-links">
+<a href="/">Home</a>
+<a href="#">Brands</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</div>
+
+</div>
+
+
+
+<!-- HERO -->
+
+<div class="hero">
+
+<h1>Welcome to <span>LapZone</span></h1>
+
+<p>Explore Premium Laptop Brands with Modern Technology</p>
+
+<button onclick="scrollToBrands()">Explore Brands</button>
+
+</div>
+
+
+
+<!-- BRAND SECTION -->
+
+<div class="brands" id="brands">
+
+<h2>Top Laptop Brands</h2>
+
+<div class="brand-container">
+
+
+<a href="/acer" style="text-decoration:none; color:white;">
+<div class="brand-card">
+
+<img src="https://i.pinimg.com/1200x/0c/25/2c/0c252cff1a5a2ea7ecdac8a0e2d28f04.jpg">
+
+<h3>Acer</h3>
+
+<p>Powerful performance with affordable pricing</p>
+
+</div>
+</a>
+
+
+
+<a href="/asus" style="text-decoration:none; color:white;">
+<div class="brand-card">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87_Asus_White.png/640px-%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87_Asus_White.png">
+
+<h3>Asus</h3>
+
+<p>Best gaming and creator laptops</p>
+
+</div>
+</a>
+
+
+
+<a href="/hp" style="text-decoration:none; color:white;">
+<div class="brand-card">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/HP_logo_1979_black.svg/640px-HP_logo_1979_black.svg.png">
+
+<h3>HP</h3>
+
+<p>Reliable and professional laptops</p>
+
+</div>
+</a>
+
+
+
+<a href="/dell" style="text-decoration:none; color:white;">
+<div class="brand-card">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dell_Logo.svg/512px-Dell_Logo.svg.png">
+
+<h3>Dell</h3>
+
+<p>Premium quality and business laptops</p>
+
+</div>
+</a>
+
+
+
+<a href="/lenovo" style="text-decoration:none; color:white;">
+<div class="brand-card">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Lenovo_ThinkVision_white-red_logo.png/640px-Lenovo_ThinkVision_white-red_logo.png">
+
+<h3>Lenovo</h3>
+
+<p>Best productivity laptops worldwide</p>
+
+</div>
+</a>
+
+
+
+<a href="/sony" style="text-decoration:none; color:white;">
+<div class="brand-card">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Sony_logo_%28white%29.svg/640px-Sony_logo_%28white%29.svg.png">
+
+<h3>Sony</h3>
+
+<p>Premium and stylish laptop designs</p>
+
+</div>
+</a>
+
+
+
+</div>
+</div>
+
+
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+© 2026 LapZone | All Rights Reserved
+
+</div>
+
+
+
+<script>
+
+function scrollToBrands(){
+
+document.getElementById("brands").scrollIntoView({
+behavior:'smooth'
+});
+
+}
+
+</script>
+
+
+
+</body>
+</html>

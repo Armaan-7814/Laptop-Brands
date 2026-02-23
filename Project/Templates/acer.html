@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Acer Laptops | LapZone</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:#020617;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#38bdf8;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+margin-left:30px;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#38bdf8;
+}
+
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:50px;
+background:linear-gradient(to right,#020617,#0f172a);
+}
+
+.hero img{
+width:180px;
+margin-bottom:15px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+color:#94a3b8;
+}
+
+
+/* LAPTOP SECTION */
+
+.container{
+padding:50px;
+}
+
+.title{
+text-align:center;
+font-size:32px;
+margin-bottom:40px;
+}
+
+.laptop-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+
+/* CARD */
+
+.card{
+background:#020617;
+border-radius:15px;
+padding:20px;
+transition:0.4s;
+border:1px solid transparent;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border:1px solid #38bdf8;
+box-shadow:0 0 20px rgba(56,189,248,0.3);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:contain;
+margin-bottom:15px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.spec{
+color:#94a3b8;
+font-size:14px;
+margin-bottom:5px;
+}
+
+.price{
+color:#38bdf8;
+font-size:20px;
+font-weight:600;
+margin:10px 0;
+}
+
+.btn{
+width:100%;
+padding:10px;
+border:none;
+background:#38bdf8;
+color:black;
+font-weight:600;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#0ea5e9;
+}
+
+
+/* FOOTER */
+
+.footer{
+background:#020617;
+text-align:center;
+padding:20px;
+margin-top:40px;
+color:#94a3b8;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="logo">LapZone</div>
+
+<div class="nav-links">
+
+<a href="/">Home</a>
+<a href="#">Acer</a>
+
+</div>
+
+</div>
+
+
+
+<!-- HERO -->
+
+<div class="hero">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Acer_2011.svg/512px-Acer_2011.svg.png">
+
+<h1>Acer Laptop Collection</h1>
+
+<p>Performance meets affordability</p>
+
+</div>
+
+
+
+<!-- LAPTOP SECTION -->
+
+<div class="container">
+
+<div class="title">Available Acer Laptops</div>
+
+<div class="laptop-grid">
+
+
+
+<!-- Laptop 1 -->
+
+<div class="card">
+
+<img src="https://m.media-amazon.com/images/I/71vFKBpKakL._SL1500_.jpg">
+
+<h3>Acer Aspire 7</h3>
+
+<div class="spec">Intel i5 12th Gen</div>
+<div class="spec">16GB RAM</div>
+<div class="spec">512GB SSD</div>
+<div class="spec">RTX 3050</div>
+
+<div class="price">₹62,999</div>
+
+<button class="btn">View Details</button>
+
+</div>
+
+
+
+<!-- Laptop 2 -->
+
+<div class="card">
+
+<img src="https://m.media-amazon.com/images/I/61QGMXcU0XL._SL1500_.jpg">
+
+<h3>Acer Nitro 5</h3>
+
+<div class="spec">Intel i7 13th Gen</div>
+<div class="spec">16GB RAM</div>
+<div class="spec">1TB SSD</div>
+<div class="spec">RTX 4060</div>
+
+<div class="price">₹1,05,999</div>
+
+<button class="btn">View Details</button>
+
+</div>
+
+
+
+<!-- Laptop 3 -->
+
+<div class="card">
+
+<img src="https://m.media-amazon.com/images/I/71VVf6JvZUL._SL1500_.jpg">
+
+<h3>Acer Predator Helios</h3>
+
+<div class="spec">Intel i9 13th Gen</div>
+<div class="spec">32GB RAM</div>
+<div class="spec">1TB SSD</div>
+<div class="spec">RTX 4070</div>
+
+<div class="price">₹1,89,999</div>
+
+<button class="btn">View Details</button>
+
+</div>
+
+
+
+</div>
+</div>
+
+
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+© 2026 LapZone | Acer Collection
+
+</div>
+
+
+
+</body>
+</html>
