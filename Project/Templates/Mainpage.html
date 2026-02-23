@@ -85,6 +85,8 @@ color:black;
 font-weight:600;
 border-radius:30px;
 transition:0.3s;
+display:inline-block;
+text-decoration:none;
 }
 
 .explore-btn:hover{
@@ -140,6 +142,8 @@ border:none;
 padding:8px 20px;
 border-radius:20px;
 font-weight:600;
+display:inline-block;
+text-decoration:none;
 }
 
 
@@ -172,9 +176,7 @@ LapZone Laptop Store
 Explore latest Gaming, Business and Premium laptops
 </div>
 
-<button class="explore-btn" onclick="scrollToBrands()">
-Explore Now
-</button>
+<a class="explore-btn" href="{% url 'explore' %}">Explore Now</a>
 
 </div>
 
@@ -215,9 +217,7 @@ class="brand-logo">
 Affordable performance laptops
 </div>
 
-<a href="/acer">
-<button class="view-btn">View</button>
-</a>
+<a class="view-btn" href="{% url 'acer' %}">View</a>
 
 </div>
 </div>
@@ -238,9 +238,7 @@ class="brand-logo">
 Best gaming laptops
 </div>
 
-<a href="/asus">
-<button class="view-btn">View</button>
-</a>
+<a class="view-btn" href="{% url 'asus' %}">View</a>
 
 </div>
 </div>
@@ -261,9 +259,7 @@ class="brand-logo">
 Premium stylish laptops
 </div>
 
-<a href="/sony">
-<button class="view-btn">View</button>
-</a>
+<a class="view-btn" href="{% url 'explore' %}">View</a>
 
 </div>
 </div>
@@ -284,9 +280,7 @@ class="brand-logo">
 Professional premium laptops
 </div>
 
-<a href="/dell">
-<button class="view-btn">View</button>
-</a>
+<a class="view-btn" href="{% url 'dell' %}">View</a>
 
 </div>
 </div>
@@ -307,9 +301,7 @@ class="brand-logo">
 Business laptops
 </div>
 
-<a href="/hp">
-<button class="view-btn">View</button>
-</a>
+<a class="view-btn" href="{% url 'hp' %}">View</a>
 
 </div>
 </div>
@@ -330,9 +322,7 @@ class="brand-logo">
 Productivity laptops
 </div>
 
-<a href="/lenovo">
-<button class="view-btn">View</button>
-</a>
+<a class="view-btn" href="{% url 'lenovo' %}">View</a>
 
 </div>
 </div>
@@ -340,22 +330,6 @@ Productivity laptops
 
 
 </div>  <!-- END OF ROW -->
-
-
-
-<script>
-
-/* Scroll button function */
-
-function scrollToBrands(){
-
-document.getElementById("brands").scrollIntoView({
-behavior:"smooth"
-});
-
-}
-
-</script>
 
 
 

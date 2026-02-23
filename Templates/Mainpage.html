@@ -1,316 +1,335 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'base.html' %}
 
-<title>LapZone | Premium Laptop Collection</title>
+{% block title %}
+Home | LapZone
+{% endblock %}
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+{% block content %}
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+/* ================= LOGO CONTAINER FIX ================= */
 
-body{
-background:#0f172a;
-color:white;
-}
+/* This container forces same size for all logos */
 
-/* NAVBAR */
+.logo-container{
 
-.navbar{
+height:100px;              /* same height for all */
 display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 60px;
-background:#020617;
-box-shadow:0 0 10px rgba(0,0,0,0.5);
-position:sticky;
-top:0;
-z-index:1000;
-}
+align-items:center;        /* vertical center */
+justify-content:center;    /* horizontal center */
+margin-bottom:15px;
 
-.logo{
-font-size:24px;
-font-weight:700;
-color:#38bdf8;
-}
-
-.nav-links a{
-text-decoration:none;
-color:white;
-margin-left:30px;
-font-weight:500;
-transition:0.3s;
-}
-
-.nav-links a:hover{
-color:#38bdf8;
 }
 
 
-/* HERO */
+/* This fixes logo scaling */
 
-.hero{
-height:80vh;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-text-align:center;
-background:linear-gradient(to right,#020617,#0f172a,#020617);
+.brand-logo{
+
+max-height:80px;           /* max logo height */
+max-width:140px;           /* max logo width */
+object-fit:contain;        /* keeps ratio correct */
+
 }
 
-.hero h1{
-font-size:48px;
-margin-bottom:20px;
+
+
+
+.hero-title{
+  font-size:48px;
+  font-weight:700;
+  background:linear-gradient(90deg,#00ffff,#38bdf8);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
 }
 
-.hero span{
-color:#38bdf8;
-}
 
-.hero p{
+.hero-sub{
 color:#94a3b8;
 font-size:18px;
-margin-bottom:30px;
+margin-top:10px;
 }
 
-.hero button{
+/* Button styling */
+
+.explore-btn{
+margin-top:20px;
 padding:12px 30px;
 border:none;
-background:#38bdf8;
+background:linear-gradient(90deg,#00ffff,#38bdf8);
 color:black;
 font-weight:600;
-border-radius:8px;
-cursor:pointer;
+border-radius:30px;
 transition:0.3s;
 }
 
-.hero button:hover{
-background:#0ea5e9;
-transform:scale(1.05);
+.explore-btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 20px rgba(0,255,255,0.5);
 }
 
 
-/* BRAND SECTION */
+/* ================= BRAND CARD SECTION ================= */
 
-.brands{
-padding:60px;
-}
-
-.brands h2{
-text-align:center;
-margin-bottom:40px;
-font-size:32px;
-}
-
-.brand-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
+/* Card main container design */
 
 .brand-card{
-background:#020617;
-padding:30px;
+background:rgba(255,255,255,0.05);
 border-radius:15px;
+padding:20px;
 text-align:center;
 transition:0.4s;
-cursor:pointer;
-border:1px solid transparent;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.1);
 }
+
+/* Hover animation */
 
 .brand-card:hover{
 transform:translateY(-10px);
-border:1px solid #38bdf8;
-box-shadow:0 0 20px rgba(56,189,248,0.3);
+box-shadow:0 0 25px rgba(0,255,255,0.4);
 }
 
-.brand-card img{
-width:100%;
-height:140px;
+/* Logo size control */
+
+.brand-logo{
+height:80px;
 object-fit:contain;
 margin-bottom:15px;
 }
 
-.brand-card h3{
-margin-bottom:10px;
+.brand-name{
+font-size:20px;
+font-weight:600;
 }
 
-.brand-card p{
-color:#94a3b8;
+.brand-desc{
 font-size:14px;
+color:#94a3b8;
+margin-bottom:15px;
+}
+
+.view-btn{
+background:#00ffff;
+color:black;
+border:none;
+padding:8px 20px;
+border-radius:20px;
+font-weight:600;
 }
 
 
-/* FOOTER */
+/* ================= ANIMATION ================= */
 
-.footer{
-background:#020617;
-padding:20px;
-text-align:center;
-margin-top:50px;
-color:#94a3b8;
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
-</head>
-
-<body>
 
 
-<!-- NAVBAR -->
 
-<div class="navbar">
+<!-- ================= HERO SECTION ================= -->
 
-<div class="logo">LapZone</div>
+<div class="hero-section">
 
-<div class="nav-links">
-<a href="/">Home</a>
-<a href="#">Brands</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
+<div class="hero-title">
+LapZone Laptop Store
 </div>
 
+<div class="hero-sub">
+Explore latest Gaming, Business and Premium laptops
 </div>
 
-
-
-<!-- HERO -->
-
-<div class="hero">
-
-<h1>Welcome to <span>LapZone</span></h1>
-
-<p>Explore Premium Laptop Brands with Modern Technology</p>
-
-<button onclick="scrollToBrands()">Explore Brands</button>
+<button class="explore-btn" onclick="scrollToBrands()">
+Explore Now
+</button>
 
 </div>
 
 
 
-<!-- BRAND SECTION -->
+<!-- ================= BRAND SECTION ================= -->
 
-<div class="brands" id="brands">
+<h2 class="text-center mb-4">Top Brands</h2>
 
-<h2>Top Laptop Brands</h2>
+<!-- 
+IMPORTANT:
+.row controls card direction
 
-<div class="brand-container">
+col-md-4 means:
+12/4 = 3 cards per row
+
+If you want:
+col-md-3 = 4 cards per row
+col-md-6 = 2 cards per row
+col-md-12 = 1 card per row
+-->
+
+<div class="row g-4" id="brands">
 
 
-<a href="/acer" style="text-decoration:none; color:white;">
+
+<!-- ACER CARD -->
+
+<div class="col-md-4">
 <div class="brand-card">
 
-<img src="https://i.pinimg.com/1200x/0c/25/2c/0c252cff1a5a2ea7ecdac8a0e2d28f04.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Acer_Inc._logo_1987_black.svg/640px-Acer_Inc._logo_1987_black.svg.png"
+class="brand-logo">
 
-<h3>Acer</h3>
+<div class="brand-name">Acer</div>
 
-<p>Powerful performance with affordable pricing</p>
-
+<div class="brand-desc">
+Affordable performance laptops
 </div>
+
+<a href="/acer">
+<button class="view-btn">View</button>
 </a>
 
+</div>
+</div>
 
 
-<a href="/asus" style="text-decoration:none; color:white;">
+
+<!-- ASUS CARD -->
+
+<div class="col-md-4">
 <div class="brand-card">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87_Asus_White.png/640px-%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87_Asus_White.png">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/ASUS_Logo.svg/512px-ASUS_Logo.svg.png"
+class="brand-logo">
 
-<h3>Asus</h3>
+<div class="brand-name">Asus</div>
 
-<p>Best gaming and creator laptops</p>
-
+<div class="brand-desc">
+Best gaming laptops
 </div>
+
+<a href="/asus">
+<button class="view-btn">View</button>
 </a>
 
+</div>
+</div>
 
 
-<a href="/hp" style="text-decoration:none; color:white;">
+
+<!-- SONY CARD -->
+
+<div class="col-md-4">
 <div class="brand-card">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/HP_logo_1979_black.svg/640px-HP_logo_1979_black.svg.png">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Sony_logo.svg/512px-Sony_logo.svg.png"
+class="brand-logo">
 
-<h3>HP</h3>
+<div class="brand-name">Sony</div>
 
-<p>Reliable and professional laptops</p>
-
+<div class="brand-desc">
+Premium stylish laptops
 </div>
+
+<a href="/sony">
+<button class="view-btn">View</button>
 </a>
 
+</div>
+</div>
 
 
-<a href="/dell" style="text-decoration:none; color:white;">
+
+<!-- DELL CARD -->
+
+<div class="col-md-4">
 <div class="brand-card">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dell_Logo.svg/512px-Dell_Logo.svg.png">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dell_Logo.svg/512px-Dell_Logo.svg.png"
+class="brand-logo">
 
-<h3>Dell</h3>
+<div class="brand-name">Dell</div>
 
-<p>Premium quality and business laptops</p>
-
+<div class="brand-desc">
+Professional premium laptops
 </div>
+
+<a href="/dell">
+<button class="view-btn">View</button>
 </a>
 
+</div>
+</div>
 
 
-<a href="/lenovo" style="text-decoration:none; color:white;">
+
+<!-- HP CARD -->
+
+<div class="col-md-4">
 <div class="brand-card">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Lenovo_ThinkVision_white-red_logo.png/640px-Lenovo_ThinkVision_white-red_logo.png">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/HP_logo_2012.svg/512px-HP_logo_2012.svg.png"
+class="brand-logo">
 
-<h3>Lenovo</h3>
+<div class="brand-name">HP</div>
 
-<p>Best productivity laptops worldwide</p>
-
+<div class="brand-desc">
+Business laptops
 </div>
+
+<a href="/hp">
+<button class="view-btn">View</button>
 </a>
 
+</div>
+</div>
 
 
-<a href="/sony" style="text-decoration:none; color:white;">
+
+<!-- LENOVO CARD -->
+
+<div class="col-md-4">
 <div class="brand-card">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Sony_logo_%28white%29.svg/640px-Sony_logo_%28white%29.svg.png">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Lenovo_logo.png?20081223052146"
+class="brand-logo">
 
-<h3>Sony</h3>
+<div class="brand-name">Lenovo</div>
 
-<p>Premium and stylish laptop designs</p>
-
+<div class="brand-desc">
+Productivity laptops
 </div>
+
+<a href="/lenovo">
+<button class="view-btn">View</button>
 </a>
 
-
-
 </div>
 </div>
 
 
 
-<!-- FOOTER -->
-
-<div class="footer">
-
-© 2026 LapZone | All Rights Reserved
-
-</div>
+</div>  <!-- END OF ROW -->
 
 
 
 <script>
 
+/* Scroll button function */
+
 function scrollToBrands(){
 
 document.getElementById("brands").scrollIntoView({
-behavior:'smooth'
+behavior:"smooth"
 });
 
 }
@@ -319,5 +338,4 @@ behavior:'smooth'
 
 
 
-</body>
-</html>
+{% endblock %}
