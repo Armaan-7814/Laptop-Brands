@@ -94,7 +94,10 @@ git commit -m "Initial Django setup"
 git branch -M main
 git remote add origin https://github.com/Armaan-7814/Laptop-brands-.git
 git push -u origin main
-How it works (simple)
+
+
+*How it works (simple)*
+
 startproject -> main Django config files banata hai.
 startapp -> feature/module banata hai (views.py, models.py, etc.).
 views.py -> function likhte ho jo page return karta hai.
