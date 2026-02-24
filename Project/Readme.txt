@@ -104,3 +104,5 @@ views.py -> function likhte ho jo page return karta hai.
 urls.py -> URL ko view function se connect karta hai.
 templates/ -> HTML files rakhte ho.
 runserver -> local server start karta hai.
+
+#
