@@ -105,4 +105,9 @@ urls.py -> URL ko view function se connect karta hai.
 templates/ -> HTML files rakhte ho.
 runserver -> local server start karta hai.
 
-#
+# external Css apply Method 
+1. make new folder static - css,js,image
+in main Folder of our project 
+
+
+
