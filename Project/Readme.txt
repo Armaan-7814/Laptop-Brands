@@ -13,8 +13,12 @@ venv\Scripts\activate
 # 4 Install Django
 pip install django
 
+
+# for install bootstrap 
+pip install django-bootstrap
+
 # Optional: install bootstrap package for Django templates
-pip install django-bootstrap-v5
+
 2. Create Django project and app
 # Create project
 django-admin startproject Project .
@@ -108,6 +112,13 @@ runserver -> local server start karta hai.
 # external Css apply Method 
 1. make new folder static - css,js,image
 in main Folder of our project 
+
+
+{% load static %}
+{% load django_bootstrap5 %} #  they are ised for include css in their 
+{% bootstrap_css % } # they are ised for include css in their
+
+{% bootstrap_javascript %} uper on the body they are used for using js in their 
 
 
 
